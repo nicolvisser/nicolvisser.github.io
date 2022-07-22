@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+
+import laptop from './images/laptop.png'
+
+import TypeAnimation from 'react-type-animation'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className='TopBar'>Nicol Visser</div>
+            <img src={laptop} className="Laptop" alt="logo" />
+            <div className='Screen'>
+                <TypeAnimation
+                    cursor={false}
+                    sequence={['working on this site...', 1000, '']}
+                    repeat={Infinity}
+                />
+            </div>
+        </div>
+    );
 }
 
 export default App;
